@@ -1,0 +1,86 @@
+// █████ MAIN-NAVIGATION
+.main-navigation
+	margin: auto
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-left: 5%
+	padding-right: 5%
+	width: 100%
+	max-width: 1400px
+	position: relative
+	@include media-breakpoint-up(md)
+		padding-left: 0
+		padding-right: 0
+		margin-left: 5%
+		margin-right: 5%
+		width: 90%
+	&::before
+		content: ''
+		position: absolute
+		display: inline-block
+		bottom: 0px
+		left: 0px
+		right: 0
+		border-bottom: 2px solid var(--brd-header)
+
+.main-navigation__logo
+	max-width: 200px
+
+.main-navigation__right
+	flex-grow: 1
+	display: flex
+	align-items: center
+	justify-content: right
+
+.main-navigation__site-menu-nav
+	display: none !important
+	@include media-breakpoint-up(md)
+		display: flex !important
+.site-menu-nav::after
+	content: "|"
+	display: inline-block
+	padding-left: 30px
+	padding-right: 30px
+	padding-bottom: 3px
+	font-size: 15px
+	color: rgb(255 255 255 / 50%)
+
+
+
+// █████ MAIN-NAVIGATION__TRIGGER
+.main-navigation__trigger
+	padding: 0 5px
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 50px
+	height: 50px
+	background: 0 0
+	border: 0
+	user-select: none
+	cursor: pointer
+	@include media-breakpoint-up(md)
+		display: none
+.main-navigation__trigger > span
+	position: relative
+	display: inline-block
+	width: 30px
+	height: 3px
+	vertical-align: bottom
+	background-color: var(--txt-header)
+	// не использовал, т.к. конфликтует со sticky
+	// transition: background-color .3s .3s
+	&::before, &::after
+		content: ""
+		position: absolute
+		left: 0
+		width: 100%
+		height: 3px
+		background-color: var(--txt-header)
+		transform-origin: 50% 50%
+		transition: top .3s .3s,transform .3s
+	&::before
+		top: 10px
+	&::after
+		top: -10px

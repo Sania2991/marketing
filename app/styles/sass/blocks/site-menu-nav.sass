@@ -1,0 +1,111 @@
+// █████ SITE-MENU-NAV
+.site-menu-nav
+	margin: 0
+	padding: 0
+	display: flex
+	flex-wrap: nowrap
+	align-items: center
+	justify-content: right
+	list-style-type: none
+	letter-spacing: .6px
+	font-size: 12px
+	font-weight: 600
+	text-transform: uppercase
+
+.site-menu-nav-node
+	padding-left: 15px
+	padding-right: 15px
+
+.site-menu-nav-link
+	position: relative
+	display: inline-block
+	height: 50px
+	line-height: 50px
+	white-space: nowrap
+	text-decoration: none
+	opacity: .7
+	transition: opacity .35s
+	color: var(--txt-header)
+	&::after
+		content: ''
+		position: absolute
+		bottom: 0px
+		left: 25%
+		width: 50%
+		border-bottom: 2px solid var(--txt-header)
+		transition: .35s
+		opacity: 0
+.site-menu-nav-link:hover
+	color: var(--txt-header)
+	opacity: .9
+	&::after
+		opacity: .9
+.site-menu-nav-link--active
+	color: var(--txt-header)
+	opacity: 1
+	&::after
+		opacity: 1
+
+
+// █████ SITE-MENU-NAV--VERTICAL
+.site-menu-nav--vertical
+	flex-grow: 0
+	flex-direction: column
+	padding-top: 20px
+	padding-bottom: 10px
+	&::after
+		content: unset
+	.site-menu-nav-link
+		margin: 0
+		padding: 0
+	.site-menu-nav-node
+		width: 100%
+		text-align: center
+	.site-menu-nav-link
+		width: 100%	
+		&:after
+			content: none
+
+
+// █████ WORDPRESS - LANG-LIST
+.lang-list
+	margin: 0
+	padding: 0
+	display: flex
+	flex-wrap: nowrap
+	justify-content: right
+	align-items: center
+	list-style-type: none
+	letter-spacing: .6px
+	font-size: 12px
+
+.lang-item
+	padding-left: 5px
+	padding-right: 5px
+	margin-left: 10px
+	margin-right: 10px
+	display: inline-block
+	position: relative
+	height: 50px
+	line-height: 50px
+	white-space: nowrap
+	text-decoration: none
+	transition: opacity .35s
+	font-weight: 600
+	text-transform: uppercase
+	color: var(--txt-white)
+	opacity: .5
+.lang-item:hover
+	opacity: .9
+.lang-item--active
+	opacity: 1
+
+
+.lang-item a
+	display: flex !important
+	align-items: center !important
+	cursor: pointer
+.lang-item a::after
+	border: none
+.lang-item a:hover::after
+	border: none
