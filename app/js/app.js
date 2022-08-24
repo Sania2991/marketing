@@ -1,6 +1,12 @@
 // // Import vendor jQuery plugin example
 // import '~/app/libs/mmenu/dist/mmenu.js'
 
+// ██ IMPORT ██
+// MY-SLIDERS
+import { initSliderHome } from './blocks/my-sliders.js';
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	// █████ HAMBURGER
@@ -118,5 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	}
+
+
+	// █████ MY-SLIDERS
+	// Home-slider
+  initSliderHome();
 
 })

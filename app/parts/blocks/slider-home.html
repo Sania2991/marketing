@@ -1,0 +1,37 @@
+<style>
+	.slider-home__img-1 {
+		background-image: url(../images/demo/site/1.jpg);
+	}
+	.slider-home__img-2 {
+		background-image: url(../images/demo/site/2.jpg);
+	}
+</style>
+
+<section class="slider-home">
+	<div class="slider-container">
+
+		<div class="slider-img">
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide slider-img__slide">
+					<div class="slider-img__bg slider-home__img-1" data-swiper-parallax="20%">Slide_1</div>
+				</div>
+				<div class="swiper-slide slider-img__slide">
+					<div class="slider-img__bg slider-home__img-2" data-swiper-parallax="20%">Slide_2</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="slider-navigation">
+			<div class="slider-navigation__container">
+				<div class="swiper-button-prev slider-home__button-prev"></div>
+				<div class="swiper-button-next slider-home__button-next"></div>
+			</div>
+		</div>
+
+		<!-- Необходимо для высоты слайдера, зависящей от ширины экрана -->
+		<div class="slider-home__cover-overlay"></div>
+
+	</div>
+</section>
