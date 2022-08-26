@@ -1,0 +1,18 @@
+// SHOW-MAIN-NAV
+.show-main-nav
+	.page
+		overflow: hidden
+	.main-navigation__trigger > span
+		background-color: transparent !important
+		transition: background-color .3s .3s
+		&::before, &::after
+			transition: top .3s,transform .3s .5s
+		&::before
+			top: 0px
+			transform: rotate3d(0,0,1,45deg)
+		&::after
+			top: 0px
+			transform: rotate3d(0,0,1,-45deg)
+	.page-header--sticky
+		.main-navigation::before
+			border-color: hsla(0,0%,100%,.25)
