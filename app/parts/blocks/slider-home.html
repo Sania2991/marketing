@@ -1,34 +1,95 @@
-<style>
-	.slider-home__img-1 {
-		background-image: url(../images/demo/site/bg2.jpg);
-	}
-	.slider-home__img-2 {
-		background-image: url(../images/demo/site/2.jpg);
-	}
-</style>
+<section class="promo-slider">
 
-<section class="slider-home">
-	<div class="slider-container">
+	<div class="slider-img">
+		<div class="swiper-wrapper">
 
-		<div class="slider-img">
+			<div class="swiper-slide slider-img__slide">
+				<div class="slider-img__bg promo-slider__img-1" data-swiper-parallax="20%"
+					style="background-image: url(../images/demo/site/bg2.jpg);">Slide_1</div>
+			</div>
+			<div class="swiper-slide slider-img__slide">
+				<div class="slider-img__bg promo-slider__img-2" data-swiper-parallax="20%"
+					style="background-image: url(../images/demo/site/2.jpg);">Slide_2</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- <div class="slider-text">
 			<div class="swiper-wrapper">
 
-				<div class="swiper-slide slider-img__slide">
-					<div class="slider-img__bg slider-home__img-1" data-swiper-parallax="20%">Slide_1</div>
+				<div class="swiper-slide slider-text__slide">
+					<div class="slider-text__content">
+						<h2 class="slider-text__heading">МСТехника</h2>
+						<p class="slider-text__desc">Cайт аренды строительной техники.</p>
+						<button class="btn btn--primary slider-button"><span
+							class="button__text">Перейти</span></button>
+					</div>
 				</div>
-				<div class="swiper-slide slider-img__slide">
-					<div class="slider-img__bg slider-home__img-2" data-swiper-parallax="20%">Slide_2</div>
+
+				<div class="swiper-slide slider-text__slide">
+					<div class="slider-text__content">
+						<h2 class="slider-text__heading">Игроград</h2>
+						<p class="slider-text__desc">Cайт детского развлекательного клуба.</p>
+						<button class="btn btn--primary slider-button"><span
+								class="button__text">Перейти</span></button>
+					</div>
 				</div>
 
 			</div>
-		</div>
-		
-		<div class="slider-navigation">
+		</div> -->
+
+
+
+	<div class="promo-slider__bottom">
+		<div class="promo-slider__navigation slider-navigation">
 			<div class="slider-navigation__container">
-				<div class="swiper-button-prev slider-home__button-prev"></div>
-				<div class="swiper-button-next slider-home__button-next"></div>
+				<div class="swiper-button-prev promo-slider__button-prev"></div>
+
+				<div class="slider-pagination-count">
+					<span class="current">1</span> / <span class="total">3</span>
+				</div>
+
+				<div class="swiper-button-next promo-slider__button-next"></div>
 			</div>
 		</div>
 
+		<div class="promo-slider__pagination slider-pagination">
+			<div class="swiper-pagination"></div>
+		</div>
+
+		<svg class="slider-overlay" viewBox="0 0 1000 100">
+			<path class="slider-overlay__path-fill" d="M0,70 C450,100 500,20, 1000,20 L 1000 100 L 0 100" stroke="transparent" fill="black"></path>
+			<path class="slider-overlay__path-stroke" d="M0,70 C450,100 500,20, 1000,20" stroke="green" stroke-width="3" fill="transparent"></path>
+		</svg>
 	</div>
+
+
+	
+	<div class="promo-slider__aside">
+		<div class="slider-share">
+			<ul class="slider-share__list">
+				<li class="slider-share__item">
+					<a href="https://twitter.com/intent/tweet?url=https://webdesign-master.ru" class="slider-share__link"
+						target="_blank">
+						<img src="images/site/icons/yandex-brands.svg" alt="Twitter" class="slider-share__img">
+					</a>
+					<!-- <a class="slider-share__link" target="_blanck" href="https://vk.com/sania2991">
+						<i class="slider-share__list fa fa-facebook"></i>
+					</a> -->
+				</li>
+
+				<li class="slider-share__item">
+					<a href="https://twitter.com/intent/tweet?url=https://webdesign-master.ru" class="slider-share__link"
+						target="_blank">
+						<img src="images/site/icons/envelope-regular.svg" alt="Twitter" class="slider-share__img">
+					</a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+
+
 </section>

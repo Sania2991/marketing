@@ -1,0 +1,276 @@
+// █████ PROMO-SLIDER
+.promo-slider
+	position: relative
+	overflow: hidden
+	color: var(--txt-header)
+	background-color: var(--bg-promo-slider)
+	min-height: 50vw
+
+.promo-slider__aside
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	padding-bottom: 10px
+	width: 100%
+	z-index: 2
+	background-color: var(--bg-promo-slider--overlay)
+	@include media-breakpoint-up(md)
+		position: absolute
+		left: unset
+		padding-top: 80px
+		padding-bottom: 8vw
+		padding-right: 15px
+		padding-left: 15px
+		height: 100%
+		width: auto
+		z-index: 2
+		background-color: unset
+
+.promo-slider__bottom
+	margin-left: auto
+	padding: 0 calc($gutter / 2)
+	position: absolute
+	right: 0
+	bottom: 50px
+	min-height: 7.5vw
+	display: flex
+	justify-content: right
+	width: 100%
+	z-index: 5
+	@include media-breakpoint-up(md)
+		bottom: 0px
+	@include media-breakpoint-up(lg)
+		margin: auto
+		flex-direction: column
+		align-items: end
+
+.promo-slider__pagination
+	position: relative
+	@include media-breakpoint-up(lg)
+		width: 200px
+
+.promo-slider__navigation
+	display: none
+	position: relative
+	@include media-breakpoint-up(md)
+		display: flex
+		align-items: center
+		order: 1
+	@include media-breakpoint-up(lg)
+		width: 200px
+		order: 0
+
+
+
+
+	
+// █████ SLIDER-NAVIGATION
+.slider-navigation__container
+	margin: auto
+	position: relative
+	padding-left: 40px
+	padding-right: 40px
+	display: block
+	height: 50px	
+	width: 180px
+
+// *** Переопределение SwiperJS-style
+.slider-navigation
+	.swiper-button-prev, .swiper-button-next
+		width: 32px
+		color: var(--accent)
+		&::after
+			font-size: 16px
+		&.swiper-button-disabled
+			opacity: .3
+			color: var(--txt-header)
+	.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+		content: "→"
+	.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+		content: "←"
+
+
+
+
+
+// █████ SLIDER-PAGINATION-COUNT
+.slider-pagination-count
+	position: absolute
+	left: 40px
+	top: 0px
+	display: flex
+	align-items: baseline
+	justify-content: center
+	width: 100px
+	height: 50px
+	font-size: 16px
+	z-index: 10
+	.current
+		min-width: 25px
+		display: inline-block
+		font-size: 30px
+		color: var(--accent)
+	.total
+		min-width: 25px
+		padding-left: 4px
+
+
+
+
+
+
+// █████ SLIDER-PAGINATION
+.slider-pagination
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	@include media-breakpoint-up(md)
+		margin-right: $gutter
+	@include media-breakpoint-up(lg)
+		margin-right: 0
+
+// *** Переопределение SwiperJS-style
+.slider-pagination
+	.swiper-pagination
+		position: relative
+	.swiper-pagination-bullet
+		position: relative
+		background-color: var(--txt-header)
+		&::before
+			content: ''
+			width: 16px
+			height: 16px
+			border: 1px solid transparent
+			position: absolute
+			border-radius: 100%
+			left: -4px
+			top: -4px
+		&:hover
+			background-color: var(--accent)
+			transition: .35s
+	.swiper-pagination-bullets.swiper-pagination-horizontal
+		bottom: 0px
+		text-align: right
+		@include media-breakpoint-up(md)
+			text-align: center
+		@include media-breakpoint-up(lg)
+			bottom: 7px
+	.swiper-pagination-bullet-active
+		background-color: var(--accent)
+		transition: .35s
+		&::before
+			border-color: var(--accent)
+			transition: .35s .15s
+	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+		margin: 0 8px
+
+
+
+
+
+// █████ SLIDER-SHARE
+.slider-share
+	color: var(--txt-white)
+	@include media-breakpoint-up(md)
+		height: 100%
+
+.slider-share__list
+	margin: 0
+	padding: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	@include media-breakpoint-up(md)
+		flex-direction: column
+		justify-content: center
+		row-gap: 10px
+		height: 100%
+		&::before,
+		&::after
+			content: ''
+			flex-grow: 3
+			position: relative
+			display: inline-block
+			width: 1px
+			max-height: 70px
+			background-color: var(--txt-white)
+			opacity: .3
+
+.slider-share__item
+	list-style: none
+
+.slider-share__link
+	padding: 5px 10px
+	margin-left: 20px
+	margin-right: 20px
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 40px
+	width: 40px
+	opacity: .3
+	transition: opacity .5s ease-out
+	&:hover,
+	&:focus
+		opacity: 1
+	@include media-breakpoint-up(md)
+		margin: 15px 0
+		margin: 0
+		opacity: .7
+
+.slider-share__img
+	height: 20px
+	width: 20px
+	object-fit: contain
+	filter: drop-shadow( 1px 2px 2px rgba(0, 0, 0, .8))
+
+
+
+
+
+// █████ SLIDER-IMG
+.slider-img
+	position: relative
+	min-height: 50vw
+	width: 100vw
+	overflow: hidden
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		z-index: 2
+		background-color: rgba(#000, .25)
+		background: linear-gradient(135deg, rgba(#000, .25) 22%, rgba(#000, .3) 35%, rgba(#000, .05) 65%)
+
+.slider-img__slide
+	height: 100%
+	overflow: hidden
+
+.slider-img__bg
+	height: 100%
+	min-height: 50vw
+	background-size: cover
+	background-position: center
+
+
+
+
+
+// █████ SLIDER-OVERLAY
+.slider-overlay
+	position: absolute
+	left: 0
+	bottom: 0
+	height: auto
+	width: 100%
+	z-index: -1
+
+.slider-overlay__path-fill
+	fill: rgb(40 75 94 / 80%)
+
+.slider-overlay__path-stroke
+	stroke: white
+	opacity: .1
