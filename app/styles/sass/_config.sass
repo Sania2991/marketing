@@ -9,16 +9,17 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1200px)
+
+// Мои переменные, зависящиеся от Bootstrap
 $gutter: $grid-gutter-width
+$slider-text-container: $container-max-widths
 
 // IMPORT SECTION
-
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
-
-$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1320px)
 
 // ███ Slider-img
 $slider-img-heights: (default: 150vw, sm: 50vw)

@@ -293,16 +293,30 @@
 	flex-direction: column
 
 .slider-text__content
-	padding: 50px $gutter 8vw $gutter
+	padding-top: 50px
+	padding-bottom: 8vw
 	display: block
 	overflow: hidden
 	width: 100%
 	height: 100%
 	min-height: calc(42vw - 60px)
+	// поведение как у Bootstrap-grid
+	margin-left: auto
+	margin-right: auto
+	padding-left: calc($gutter * .5)
+	padding-right: calc($gutter * .5)
+	width: 100%
 	@include media-breakpoint-up(sm)
-		padding-left: 70px
+		max-width: map-get($slider-text-container, 'sm')
+	@include media-breakpoint-up(md)
+		max-width: map-get($slider-text-container, 'md')
 	@include media-breakpoint-up(lg)
 		padding-top: 100px
+		max-width: map-get($slider-text-container, 'lg')
+	@include media-breakpoint-up(xl)
+		max-width: map-get($slider-text-container, 'xl')
+	@include media-breakpoint-up(xxl)
+		max-width: map-get($slider-text-container, 'xxl')
 
 .slider-text__heading
 	float: left
