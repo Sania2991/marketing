@@ -1,14 +1,51 @@
+<style>
+
+
+
+	.promo-slider__img-1 {
+		background-image: url(images/demo/site/promo-slider/img-1-mob-600.jpg);
+	}
+	.promo-slider__img-2 {
+		background-image: url(images/demo/site/promo-slider/img-2-mob-600.jpg);
+	}
+	/* ограничение: min-height: 400px */
+	@media (min-width: 576px) {
+		.promo-slider__img-1 {
+			background-image: url(images/demo/site/promo-slider/img-1-800.jpg);
+		}
+		.promo-slider__img-2 {
+			background-image: url(images/demo/site/promo-slider/img-2-800.jpg);
+		}
+	}
+	@media (min-width: 768px) {
+		.promo-slider__img-1 {
+			background-image: url(images/demo/site/promo-slider/img-1-1400.jpg);
+		}
+		.promo-slider__img-2 {
+			background-image: url(images/demo/site/promo-slider/img-2-1400.jpg);
+		}
+	}
+	/* ограничение: max-height: 700px */
+	@media (min-width: 1400px) {
+		.promo-slider__img-1 {
+			background-image: url(images/demo/site/promo-slider/img-1-1920.jpg);
+		}
+		.promo-slider__img-2 {
+			background-image: url(images/demo/site/promo-slider/img-2-1920.jpg);
+		}
+	}
+
+</style>
+
 <section class="promo-slider">
 		<div class="slider-img">
 			<div class="swiper-wrapper">
 
 				<div class="swiper-slide slider-img__slide">
-					<div class="slider-img__bg promo-slider__img-1" data-swiper-parallax="20%"
-						style="background-image: url(../images/demo/site/bg4.jpg);"></div>
+					<div class="slider-img__bg promo-slider__img-1" data-swiper-parallax="20%"></div>
 				</div>
 				<div class="swiper-slide slider-img__slide">
-					<div class="slider-img__bg promo-slider__img-2" data-swiper-parallax="20%"
-						style="background-image: url(../images/demo/site/2.jpg);"></div>
+					<div class="slider-img__bg promo-slider__img-2" data-swiper-parallax="20%"></div>
 				</div>
 
 			</div>
