@@ -63,6 +63,7 @@ git push -u origin master
 
 <!----><a name="frontend-header"></a>
 #### 1.1. Header - [commit](https://github.com/Sania2991/marketing/commit/6b33e6b4dda86874b9e4236eb36e17a04d67c051)
+![область переключения слайдер](github/page-header.jpg)
 
 **Header-меню** имеет следующее поведение: сначала распологается сверху (absolute), а при прокрутке до "наблюдателей", добавляются:
 * page-header--sticky  -  фиксирует меню
@@ -82,11 +83,42 @@ git push -u origin master
 <br>
 
 <!----><a name="frontend-slider-home"></a>
-#### 1.2. Slider-home
+#### 1.2. Slider-home -  `1.2. Frontend__slider-home`
+![слайдер home](github/promo-slider.jpg)
 
 ##### Ресурсы:
 * [SwiperJS](https://swiperjs.com/swiper-api#pagination) - оф. сайт
 * [WebDesignMaster](https://youtu.be/3PzzZ5eHHig) - подробный разбор работы SwiperJS
 
+<br>
+
+##### Плагины:
+* **SwiperJS** { Swiper, EffectFade, Navigation, Parallax, Pagination, Controller }
+* **GSap** { Power2 }  -  анимация цифры текущего номера слайда
+
+<br>
+
 ##### Разработка:
-* Установка SwiperJS - [❗️commit]()
+
+###### Изображения:
+![варианты изображений](github/promo-slider__images.jpg)
+
+Изображения имеют **2** варианта и **4** размера:
+* **default** - 600 x 900px (2:3)
+* **mb-up--sm** - 800 x 400px (2:1), установлено `min-height: 400px`
+* **mb-up--md** - 1400 x 700px (2:1)
+* **mb-up--xxl** - 1920 x 700px (2:1), установлено `max-height: 700px`
+<br>
+
+###### Обрезка изображения:
+* `.slider-overay` - обрезает изображение с помощью SVG
+	* [svg-art.ru](https://svg-art.ru/?p=1114) - здесь можно настроить координаты кривой для SVG
+
+<br>
+
+###### Особенности:
+![область переключения слайдер](github/promo-slider__flipping-area.jpg)
+![границы текста](github/promo-slider__text-container.jpg)
+
+* **Область взаимодействия (перелистывание)** со слайдом выделена зелёным цветом.
+* **Область текста** выделена синим цветом. Размеры всего слайда зависят от `.slider-img (relative)`, поэтому **ВАЖНО СЛЕДИТЬ**, чтобы текст не выходил за границы.
