@@ -2,8 +2,8 @@
 .promo-slider
 	position: relative
 	overflow: hidden
-	color: var(--txt-header)
-	background-color: var(--bg-promo-slider)
+	color: var(--color-white)
+	background-color: var(--color-primary-darker)
 	user-select: none
 
 .promo-slider__aside
@@ -14,7 +14,7 @@
 	padding-bottom: 10px
 	width: 100%
 	z-index: 4
-	background-color: var(--bg-promo-slider--overlay)
+	background-color: alpha(var(--color-primary-darker), 0.7)
 	@include media-breakpoint-up(md)
 		position: absolute
 		left: unset
@@ -75,12 +75,12 @@
 .slider-navigation
 	.swiper-button-prev, .swiper-button-next
 		width: 32px
-		color: var(--accent)
+		color: var(--color-primary)
 		&::after
 			font-size: 16px
 		&.swiper-button-disabled
 			opacity: .3
-			color: var(--txt-header)
+			color: var(--color-white)
 	.swiper-button-prev, .swiper-rtl .swiper-button-next
 		left: 0
 	.swiper-button-next, .swiper-rtl .swiper-button-prev
@@ -108,7 +108,7 @@
 		width: 25px
 		display: inline-block
 		font-size: 30px
-		color: var(--accent)
+		color: var(--color-primary)
 	.total
 		width: 15px
 		padding-left: 4px
@@ -132,7 +132,7 @@
 		position: relative
 	.swiper-pagination-bullet
 		position: relative
-		background-color: var(--txt-header)
+		background-color: var(--color-white)
 		&::before
 			content: ''
 			width: 16px
@@ -143,7 +143,7 @@
 			left: -4px
 			top: -4px
 		&:hover
-			background-color: var(--accent)
+			background-color: var(--color-primary)
 			transition: .35s
 	.swiper-pagination-bullets.swiper-pagination-horizontal
 		bottom: 0px
@@ -153,10 +153,10 @@
 		@include media-breakpoint-up(lg)
 			bottom: 7px
 	.swiper-pagination-bullet-active
-		background-color: var(--accent)
+		background-color: var(--color-primary)
 		transition: .35s
 		&::before
-			border-color: var(--accent)
+			border-color: var(--color-primary)
 			transition: .35s .15s
 	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
 		margin: 0 8px
@@ -165,7 +165,7 @@
 
 // █████ SLIDER-SHARE
 .slider-share
-	color: var(--txt-white)
+	color: var(--color-white)
 	@include media-breakpoint-up(md)
 		height: 100%
 
@@ -188,7 +188,7 @@
 			display: inline-block
 			width: 1px
 			max-height: 70px
-			background-color: var(--txt-white)
+			background-color: var(--color-white)
 			opacity: .3
 
 .slider-share__item
@@ -217,7 +217,7 @@
 	height: 20px
 	width: 20px
 	object-fit: contain
-	filter: drop-shadow( 1px 2px 2px rgba(0, 0, 0, .8))
+	filter: drop-shadow( 1px 2px 2px alpha(var(--color-black), 0.8))
 
 
 
@@ -236,8 +236,8 @@
 		width: 100%
 		height: 100%
 		z-index: 2
-		background-color: rgba(#000, .15)
-		background: linear-gradient(135deg,rgba(0,0,0,.1) 22%,rgba(0,0,0,.15) 35%,transparent 65%)
+		background-color: alpha(var(--color-black), 0.15)
+		background: linear-gradient(135deg,alpha(var(--color-black), 0.1) 22%,alpha(var(--color-black), 0.15) 35%,transparent 65%)
 	@include media-breakpoint-up(sm)
 		height: map-get($slider-img-heights, 'sm')
 		max-height: map-get($slider-img-max-heights, 'sm')
@@ -264,7 +264,7 @@
 	z-index: -1
 
 .slider-overlay__path-fill
-	fill: rgb(40 75 94 / 80%)
+	fill: alpha(var(--color-primary-darker), 0.7)
 
 .slider-overlay__path-stroke
 	stroke: white
@@ -325,8 +325,8 @@
 	font-size: 1.5rem
 	font-weight: 600
 	line-height: 1.4
-	color: var(--txt-header)
-	text-shadow: 2px 2px 5px #1d1d1d
+	color: var(--color-white)
+	text-shadow: 2px 2px 5px var(--color-contrast-high)
 	text-transform: uppercase
 	@include media-breakpoint-up(md)
 		font-size: 2.5rem
@@ -338,7 +338,8 @@
 	max-width: 400px
 	font-size: .8rem
 	font-weight: 500
-	color: var(--txt-header)
+	color: var(--color-white)
+	text-shadow: 2px 2px 5px var(--color-contrast-high)
 	@include media-breakpoint-up(md)
 		font-size: .9rem
 

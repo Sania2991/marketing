@@ -1,8 +1,6 @@
 // USER VARIABLES SECTION
 
-// $accent: orange // Accent Color
 $fontsize: 16px // Body Font Size
-// $textcolor: #333 // Text Color
 $lineheight: 1.65 // Document Line Height
 $userfont: Montserrat, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
@@ -51,26 +49,26 @@ $slider-img-min-heights: (default: 400px, sm: 700px)
 // GENERAL CSS SETTINGS
 
 ::placeholder
-	color: var(--txt-placeholder)
+	color: var(--color-contrast-lower)
 
 ::selection
-	background-color: var(--bg-selection)
-	color: var(--txt-selection)
+	background-color: var(--color-primary)
+	color: var(--color-white)
 
 input, textarea
 	outline: none
 	&:focus:required:invalid
-		border-color: red
+		border-color: var(--color-warning-dark)
 	&:required:valid
-		border-color: green
+		border-color: var(--color-success-dark)
 
 body
 	// font-family: $userfont
 	font-family: $userfont, sans-serif
 	font-size: $fontsize
 	line-height: $lineheight
-	color: var(--txt-content)
+	color: var(--color-contrast-high)
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
-	background-color: var(--bg-white)
+	background-color: var(--color-bg)

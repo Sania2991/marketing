@@ -52,17 +52,63 @@ git push -u origin master
 
 <!----><a name="initialize-project"></a>
 #### 0.2. Настройка проекта - [commit](https://github.com/Sania2991/marketing/commit/1204d17ab58cf8334c1cb57f545477586e9bcc28)
-* Измененяем порядок подключения стилей в `main.sass`
-* Подключаем шрифты, размеры, переменные в `_config.sass`
-* Устанавливаем переменные цветов в `_theme-colors.sass`
+
+##### Подключение стилей в `main.sass`
+```sass
+@use 'sass:math'
+@use 'sass:color'
+
+@import theme-colors
+@import config
+@import components
+@import 'helpers/**/*'
+@import 'blocks/**/*'
+```
+
+##### Подключаем шрифты, размеры, переменные в `_config.sass`
 
 <br>
+
+##### 0.2.3. Цветовая схема `_theme-colors.sass`
+![цветовая схема](github/initialize__theme-colors.jpg)
+
+* **Определяем цвета:**
+```SASS
+// main
+$color-primary: #08bbf7		// цвет действия, основной цвет для ссылок, фона кнопок и т.п.
+$color-accent: #e70d4f		// для выделения чего-то важного на странице 
+// black + white
+$color-black: #14151a
+$color-white: #fff
+// feedback  -  цвета для обратной связи с пользователем
+$color-success: #00ad00
+$color-error: #e70d4f
+$color-warning: #edb464
+// bg + contrasts
+$color-bg: #f4f4f4		// фоновые цвета
+$color-contrast: #14151a	// шрифтов, рамок, теней и т. п., обычно шкала серого тона
+```
+* **Подставляем цвета в [редактор](https://codyhouse.co/ds/globals/colors)**
+	*	копируем код (изменяем под SASS, не забыть исправить пробелы на `tab`)
+	* если тёмная тема не нужна  -  удаляем стили
+	* тестируем - запускаем файл: `tests/theme-colors.html`
+
+* **ВАЖНО**
+	* в стилях для прозрачности, используем функцию alpha:
+```sass
+background-color: alpha(var(--color-primary), 0.2)
+```
+
+
+<br>
+
+___
 
 <!----><a name="frontend"></a>
 ## 1. Вёрстка
 
 <!----><a name="frontend-header"></a>
-#### 1.1. Header - [commit](https://github.com/Sania2991/marketing/commit/6b33e6b4dda86874b9e4236eb36e17a04d67c051)
+#### 1.1. Frontend__Header - [commit](https://github.com/Sania2991/marketing/commit/6b33e6b4dda86874b9e4236eb36e17a04d67c051)
 ![область переключения слайдер](github/page-header.jpg)
 
 **Header-меню** имеет следующее поведение: сначала распологается сверху (absolute), а при прокрутке до "наблюдателей", добавляются:
@@ -83,7 +129,7 @@ git push -u origin master
 <br>
 
 <!----><a name="frontend-slider-home"></a>
-#### 1.2. Slider-home -  `1.2. Frontend__slider-home`
+#### 1.2. Frontend__Slider-home
 ![слайдер home](github/promo-slider.jpg)
 
 ##### Ресурсы:
