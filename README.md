@@ -53,23 +53,23 @@ git push -u origin master
 <!----><a name="initialize-project"></a>
 #### 0.2. Настройка проекта - [commit](https://github.com/Sania2991/marketing/commit/1204d17ab58cf8334c1cb57f545477586e9bcc28)
 
-##### Подключение стилей в `main.sass`
+##### 0.2.0. Подготовка
+
+* Подключаем шрифты, размеры сетки,.. `_config.sass`
+* Подключение стилей в `main.sass`
 ```sass
 @use 'sass:math'
 @use 'sass:color'
 
 @import theme-colors
+@import global
 @import config
 @import components
 @import 'helpers/**/*'
 @import 'blocks/**/*'
 ```
 
-##### Подключаем шрифты, размеры, переменные в `_config.sass`
-
-<br>
-
-##### 0.2.3. Цветовая схема `_theme-colors.sass`
+##### 0.2.1. Цветовая схема `_theme-colors.sass`
 ![цветовая схема](github/initialize__theme-colors.jpg)
 
 * **Определяем цвета:**
@@ -94,10 +94,22 @@ $color-contrast: #14151a	// шрифтов, рамок, теней и т. п., �
 	* тестируем - запускаем файл: `tests/theme-colors.html`
 
 * **ВАЖНО**
-	* в стилях для прозрачности, используем функцию alpha:
+	* в стилях для прозрачности, используем функцию **alpha** или **hsl**:
 ```sass
 background-color: alpha(var(--color-primary), 0.2)
+// или
+background-color: hsla(var(--color-primary-hsl), 0.2)
 ```
+<br>
+
+##### 0.2.2. Глобальные переменные `_gloabal.sass`
+
+* Типографика из [редактора](https://codyhouse.co/ds/globals/typography)
+* Расстояния из [редактора](https://codyhouse.co/ds/globals/spacing)
+* Радиус, тени, плавность анимации из [редактора](https://codyhouse.co/ds/globals/shared-styles)
+* Элементы формы из [редактора](https://codyhouse.co/ds/globals/forms)
+
+##### 0.2.3. Стили компонентов(.hover, btn, .form-control,..) `_components.sass`
 
 
 <br>
