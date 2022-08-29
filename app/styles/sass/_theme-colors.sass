@@ -4,6 +4,8 @@
 // main
 $color-primary: #08bbf7
 $color-accent: #e70d4f
+// TODO: подумать, нужно ли добавлять глобально?
+$color-secondary: #795539
 // black + white
 $color-black: #14151a
 $color-white: #fff
@@ -14,7 +16,6 @@ $color-warning: #edb464
 // bg + contrasts
 $color-bg: #f4f4f4
 $color-contrast: #14151a
-
 
 // Объявляем переменные
 @mixin defineColorHSL($color, $hue, $saturation, $lightness)
@@ -60,6 +61,12 @@ $color-contrast: #14151a
 	@include defineColorHSL(--color-accent, 342, 89%, 48%)
 	@include defineColorHSL(--color-accent-light, 342, 89%, 56%)
 	@include defineColorHSL(--color-accent-lighter, 342, 89%, 62%)
+
+	@include defineColorHSL(--color-secondary-darker, 26, 36%, 23%)
+	@include defineColorHSL(--color-secondary-dark, 26, 36%, 29%)
+	@include defineColorHSL(--color-secondary, 26, 36%, 35%)
+	@include defineColorHSL(--color-secondary-light, 26, 36%, 41%)
+	@include defineColorHSL(--color-secondary-lighter, 26, 36%, 47%)
 
 	@include defineColorHSL(--color-black, 230, 13%, 9%)
 	@include defineColorHSL(--color-white, 0, 0%, 96%)
