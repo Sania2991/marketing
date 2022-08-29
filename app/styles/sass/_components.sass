@@ -1,0 +1,119 @@
+// █████ HOVER
+.hover\:reduce-opacity
+	opacity: 1
+	transition: all 0.3s ease
+	&:hover
+		opacity: 0.8
+
+.hover\:scale
+	transition: transform 0.3s var(--ease-out-back)
+	&:hover
+		transform: scale(1.1)
+		
+.hover\:elevate
+	box-shadow: var(--shadow-sm)
+	transition: all 0.3s ease
+	&:hover
+		box-shadow: var(--shadow-md)
+
+
+
+// █████ BTN
+:root
+	--btn-padding-x: var(--space-sm)
+	--btn-padding-y: var(--space-md)
+	--btn-font-size: 1em
+	--btn-radius: var(--radius-md)
+
+.btn
+	position: relative
+	padding: var(--btn-padding-x) var(--btn-padding-y)
+	display: inline-block
+	font-size: var(--btn-font-size)
+	font-weight: 600
+	text-decoration: none
+	line-height: 1.2
+	color: var(--color-contrast-higher)
+	background: var(--color-bg-dark)
+	border: unset
+	border-radius: var(--btn-radius)
+	cursor: pointer
+	@include fontSmooth
+	transition: all 0.2s ease
+	will-change: transform
+	&:focus
+		box-shadow: 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px alpha(var(--color-contrast-higher), 0.15)
+		outline: none
+	&:active
+		transform: translateY(2px)
+
+.btn--primary
+	background: var(--color-primary)
+	color: var(--color-white)
+	box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 3px alpha(var(--color-primary-darker), 0.25), 0px 2px 6px alpha(var(--color-primary-darker), 0.1), 0px 6px 10px -2px alpha(var(--color-primary-darker), 0.25)
+	&:hover
+		background: var(--color-primary-light)
+		box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-primary-darker), 0.25), 0px 1px 4px alpha(var(--color-primary-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-primary-darker), 0.25)
+	&:focus
+		box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-primary-darker), 0.25), 0px 1px 4px alpha(var(--color-primary-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-primary-darker), 0.25), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-primary)
+
+.btn--subtle
+	background: var(--color-bg-lighter)
+	color: var(--color-contrast-higher)
+	box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.1), 0px 0px 0px 1px alpha(var(--color-black), 0.02), 0px 1px 3px -1px alpha(var(--color-black), 0.2), var(--shadow-sm)
+	&:hover
+		background: var(--color-bg-light)
+		box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.1), 0px 0px 0px 1px alpha(var(--color-black), 0.02), 0px 1px 3px -1px alpha(var(--color-black), 0.2), var(--shadow-xs)
+	&:focus
+		box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.1), 0px 0px 0px 1px alpha(var(--color-black), 0.02), 0px 1px 3px -1px alpha(var(--color-black), 0.2), var(--shadow-xs), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-contrast-high)
+
+.btn--accent
+	background: var(--color-accent)
+	color: var(--color-white)
+	box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 3px alpha(var(--color-accent-darker), 0.25), 0px 2px 6px alpha(var(--color-accent-darker), 0.1), 0px 6px 10px -2px alpha(var(--color-accent-darker), 0.25)
+	&:hover
+		background: var(--color-accent-light)
+		box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-accent-darker), 0.25), 0px 1px 4px alpha(var(--color-accent-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-accent-darker), 0.1)
+	&:focus
+		box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-accent-darker), 0.25), 0px 1px 4px alpha(var(--color-accent-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-accent-darker), 0.1), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-accent)
+
+// feedback
+.btn--disabled, .btn[disabled], .btn[readonly]
+	opacity: 0.6
+	cursor: not-allowed
+
+// size
+.btn--sm
+	font-size: 0.8em
+.btn--md
+	font-size: 1.2em
+.btn--lg
+	font-size: 1.4em
+
+
+
+// █████ FORMS
+.form-control
+	background: var(--color-bg-dark)
+	line-height: 1.2
+	box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower)
+	transition: all 0.2s ease
+
+	&::placeholder
+		opacity: 1
+		color: var(--color-contrast-low)
+
+	&:focus, &:focus-within
+		background: var(--color-bg)
+		box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-primary), var(--shadow-sm)
+		outline: none
+
+.form-control--disabled, .form-control[disabled], .form-control[readonly]
+	opacity: 0.5
+	cursor: not-allowed
+
+.form-control[aria-invalid="true"], .form-control.form-control--error
+	box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error)
+
+	&:focus, &:focus-within
+		box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error), var(--shadow-sm)

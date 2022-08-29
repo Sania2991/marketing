@@ -1,0 +1,114 @@
+// █████ TYPOGRAPHY █████
+// https://codyhouse.co/ds/globals/typography
+
+:root
+	// font family
+	// Использую OptimizeHTML5
+	// TODO
+	--font-primary: Montserrat, system-ui, sans-serif
+
+	// font size
+	--text-base-size: 1rem // body font-size
+	--text-scale-ratio: 1.2 // multiplier used to generate the type scale values 👇
+		
+	// line-height
+	--body-line-height: 1.4
+	--heading-line-height: 1.2
+		
+	// заглавные буквы - используются в сочетании с lhCrop mixin
+	--font-primary-capital-letter: 1
+
+	// единица измерения - не изменяйте, если вы не хотите изменить типографскую единицу (например, с Rem на Em).
+	--text-unit: var(--text-base-size) // if Em units → --text-unit: 1em
+
+:root, *
+	// type scale
+	--text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio))
+	--text-sm: calc(var(--text-xs) * var(--text-scale-ratio))
+	--text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio))
+	--text-lg: calc(var(--text-md) * var(--text-scale-ratio))
+	--text-xl: calc(var(--text-lg) * var(--text-scale-ratio))
+	--text-xxl: calc(var(--text-xl) * var(--text-scale-ratio))
+	--text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio))
+	--text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio))
+
+// Пока не разбирал
+// @include breakpoint(md)
+//		:root
+//			--text-base-size: 1.25rem
+//			--text-scale-ratio: 1.25
+
+
+
+
+
+// █████ SPACING █████
+// https://codyhouse.co/ds/globals/spacing
+:root
+	--space-unit: 1rem
+
+:root, *
+	--space-xxxxs: calc(0.125 * var(--space-unit))
+	--space-xxxs: calc(0.25 * var(--space-unit))
+	--space-xxs: calc(0.375 * var(--space-unit))
+	--space-xs: calc(0.5 * var(--space-unit))
+	--space-sm: calc(0.75 * var(--space-unit))
+	--space-md: calc(1.25 * var(--space-unit))
+	--space-lg: calc(2 * var(--space-unit))
+	--space-xl: calc(3.25 * var(--space-unit))
+	--space-xxl: calc(5.25 * var(--space-unit))
+	--space-xxxl: calc(8.5 * var(--space-unit))
+	--space-xxxxl: calc(13.75 * var(--space-unit))
+	--component-padding: var(--space-md)
+
+// Пока не разбирал
+// @supports(--css: variables)
+// 	@include breakpoint(md)
+// 		:root, *
+// 			--space-xxxxs: calc(0.1875 * var(--space-unit))
+//			.....
+//			--space-xxxxl: calc(21.5 * var(--space-unit))
+
+
+
+
+
+// █████ RADIUS, SHADOW, GLOW, EASY █████
+// https://codyhouse.co/ds/globals/shared-styles
+:root
+	--radius-sm: calc(var(--radius-md)/2)
+	--radius-md: 0.375em
+	--radius-lg: calc(var(--radius-md)*2)
+	--shadow-xs: 0 0.1px 0.3px hsla(var(--color-black-hsl),0.06),0 1px 2px hsla(var(--color-black-hsl),0.12)
+	--shadow-sm: 0 0.3px 0.4px hsla(var(--color-black-hsl),0.025),0 0.9px 1.5px hsla(var(--color-black-hsl),0.05),0 3.5px 6px hsla(var(--color-black-hsl),0.1)
+	--shadow-md: 0 0.9px 1.5px hsla(var(--color-black-hsl),0.03),0 3.1px 5.5px hsla(var(--color-black-hsl),0.08),0 14px 25px hsla(var(--color-black-hsl),0.12)
+	--shadow-lg: 0 1.2px 1.9px -1px hsla(var(--color-black-hsl),0.014),0 3.3px 5.3px -1px hsla(var(--color-black-hsl),0.038),0 8.5px 12.7px -1px hsla(var(--color-black-hsl),0.085),0 30px 42px -1px hsla(var(--color-black-hsl),0.15)
+	--shadow-xl: 0 1.5px 2.1px -6px hsla(var(--color-black-hsl),0.012),0 3.6px 5.2px -6px hsla(var(--color-black-hsl),0.035),0 7.3px 10.6px -6px hsla(var(--color-black-hsl),0.07),0 16.2px 21.9px -6px hsla(var(--color-black-hsl),0.117),0 46px 60px -6px hsla(var(--color-black-hsl),0.2)
+	--inner-glow: inset 0 0 0.5px 1px hsla(var(--color-white-hsl),0.075)
+	--inner-glow-top: inset 0 1px 0.5px hsla(var(--color-white-hsl),0.075)
+	--ease-in-out: cubic-bezier(0.645,0.045,0.355,1)
+	--ease-in: cubic-bezier(0.55,0.055,0.675,0.19)
+	--ease-out: cubic-bezier(0.215,0.61,0.355,1)
+	--ease-out-back: cubic-bezier(0.34,1.56,0.64,1)
+
+
+
+// text styles
+.link-subtle
+	color: inherit
+	cursor: pointer
+	text-decoration: none
+	transition: all 0.2s ease
+	&:hover
+		color: var(--color-primary)
+
+
+
+
+// █████ FORMS █████
+// https://codyhouse.co/ds/globals/forms
+:root
+	--form-control-font-size: 1em
+	--form-control-padding-x: var(--space-xs)
+	--form-control-padding-y: var(--space-xxs)
+	--form-control-radius: var(--radius-md)
