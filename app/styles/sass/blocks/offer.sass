@@ -1,0 +1,100 @@
+.offer__healine
+	margin-bottom: var(--space-lg)
+	position: relative
+	width: 100%
+.offer__subtitle
+	margin-bottom: var(--space-sm)
+	padding-left: 50px
+	position: relative
+	font-size: var(--text-xs)
+	letter-spacing: 1.2px
+	font-weight: 700
+	text-transform: uppercase
+	color: var(--color-contrast-low)
+	&::after
+		content: ""
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 40px
+		left: 0
+		border-bottom: 1px solid
+.offer__title
+	margin-bottom: var(--space-lg)
+	font-size: var(--text-xl)
+	line-height: 1.4
+	font-weight: 700
+	word-spacing: 0
+	color: var(--color-contrast-higher)
+	text-transform: uppercase
+	span
+		display: inline
+		font-weight: 400
+
+.offer__btns
+	display: flex
+	flex-direction: column
+	width: 100%
+	@include media-breakpoint-up(sm)
+		flex-direction: row
+		gap: var(--space-lg)
+.offer__btn
+	margin-bottom: var(--space-md)
+
+// TODO: WordPress
+.offer__content
+	display: block
+	ul
+		margin-bottom: 1.5em
+	li
+		text-align: left
+		margin-bottom: 1em
+	b, strong
+		color: var(--txt-content-accent)
+	h3
+		margin-top: 4rem
+		margin-bottom: 1rem
+		font-size: 1.2em
+		font-weight: 600
+		max-width: 800px
+		color: var(--txt-content-accent)
+		@include media-breakpoint-up(lg)
+			font-size: 1.5rem
+
+
+// TODO: пока не знаю, нужно ли
+// // Align
+// .offer--align-center
+// 	text-align: center
+// 	.offer__subtitle
+// 		padding-left: 0px
+// 		text-align: center
+// 		&::after
+// 			content: none
+// 	.offer__title
+// 		text-align: center
+// 		@include media-breakpoint-up(lg)
+// 			margin-left: auto
+// 			margin-right: auto
+// 			width: 70%
+// 	.offer__description
+// 		text-align: left
+// 		@include media-breakpoint-up(lg)
+// 			width: 80%
+// 			margin-left: auto
+// 			margin-right: auto
+// 	.offer__breadcrumb
+// 		justify-content: center
+// 		margin-left: auto
+// 		margin-right: auto
+// 	.offer__content
+// 		h3
+// 			text-align: center
+// 			margin-left: auto
+// 			margin-right: auto
+
+// 	.offer__btns
+// 		justify-content: center
+// 	.offer__img
+// 		margin-left: auto
+// 		margin-right: auto
