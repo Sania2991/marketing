@@ -1,3 +1,19 @@
+// TODO: просмотреть в конце
+// █████ SECTION
+.section
+	position: relative
+.section__inner
+	padding-top: 50px
+	padding-bottom: 50px
+	@include media-breakpoint-up(md)
+		padding-top: 70px
+		padding-bottom: 70px
+	@include media-breakpoint-up(lg)
+		padding-top: 90px
+		padding-bottom: 90px
+
+
+
 // █████ HOVER
 .hover\:reduce-opacity
 	opacity: 1
@@ -41,6 +57,11 @@
 	@include fontSmooth
 	transition: all 0.2s ease
 	will-change: transform
+	// TODO: изменил
+	&:hover
+		color: var(--color-primary-dark)
+		background: var(--color-bg)
+		box-shadow: inset 0px 0px 0px alpha(var(--color-black), 0.15), 0px 1px 2px alpha(var(--color-contrast-medium), 0.25), 0px 1px 4px alpha(var(--color-primary-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-primary-darker), 0.25)
 	&:focus
 		box-shadow: 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px alpha(var(--color-contrast-higher), 0.15)
 		outline: none
@@ -52,6 +73,7 @@
 	color: var(--color-white)
 	box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 3px alpha(var(--color-primary-darker), 0.25), 0px 2px 6px alpha(var(--color-primary-darker), 0.1), 0px 6px 10px -2px alpha(var(--color-primary-darker), 0.25)
 	&:hover
+		color: var(--color-white)
 		background: var(--color-primary-light)
 		box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-primary-darker), 0.25), 0px 1px 4px alpha(var(--color-primary-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-primary-darker), 0.25)
 	&:focus
@@ -72,6 +94,7 @@
 	color: var(--color-white)
 	box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 3px alpha(var(--color-accent-darker), 0.25), 0px 2px 6px alpha(var(--color-accent-darker), 0.1), 0px 6px 10px -2px alpha(var(--color-accent-darker), 0.25)
 	&:hover
+		color: var(--color-white)
 		background: var(--color-accent-light)
 		box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-accent-darker), 0.25), 0px 1px 4px alpha(var(--color-accent-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-accent-darker), 0.1)
 	&:focus

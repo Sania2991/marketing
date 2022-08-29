@@ -5,7 +5,6 @@ $lineheight: 1.65 // Document Line Height
 // Использую CodyHouse
 // $userfont: Montserrat, sans-serif // User Font Family
 $userfont: var(--font-primary)
-$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px
@@ -64,6 +63,11 @@ input, textarea
 	&:required:valid
 		border-color: var(--color-success-dark)
 
+html
+	font-size: 14px
+	@include media-breakpoint-up(md)
+		font-size: 16px
+
 body
 	font-family: $userfont
 	font-size: $fontsize
@@ -73,3 +77,4 @@ body
 	position: relative
 	overflow-x: hidden
 	background-color: var(--color-bg)
+
